@@ -5,4 +5,10 @@ F.R.I.D.A.Y. is a natural-language user interface created by Tony Stark, designe
 - git clone https://github.com/CuriousAvenger/F.R.I.D.A.Y
 - pip install -r requirements.txt
 - python3 createDB.py # Python3 Required
-- python3 friday.py
+- python3 Friday.py
+
+# Instructions:
+- Wakeword: "hey friday"
+- Skills: Self learning capability
+- Date, Time, Stock Prices, News, Wikipedia, 
+- Play Songs, Open Websites
