@@ -4,14 +4,14 @@ from googlesearch import search
 from datetime import datetime
 import requests
 import wikipedia
-from yahoo_fin import stock_info as stockV
+import yfinance as yf
 
 
 def openWebsite(websiteName):
 	chrome_options = Options()
 	chrome_options.add_experimental_option("detach", True)
 	browser = webdriver.Chrome(chrome_options=chrome_options)
-	browser.get("https://"+websiteName+".com")
+	browser.get(websiteName)
 
 def getResults(keyWord):
 	results = wikipedia.summary(keyWord, sentences=2)
@@ -30,14 +30,14 @@ def playSongs(songName):
 	browser.get(results[1])
 
 def getWeather():
-	weather = 'what is the weather'
+	weather = 'weather'
 	results = []
 	for url in search(weather, stop=5):
 		results.append(url)
 	browser = webdriver.PhantomJS()
 
 	browser.get(results[1])
-	value = browser.find_element_by_class_name('_-_-components-src-molecule-DaypartDetails-DailyContent-DailyContent--temp--1s3a7')
+	value = browser.find_element_by_class_name('/html/body/div[8]/div/div[10]/div/div[2]/div[2]/div/div/div[1]/div/div/div/div/div[1]/div[1]/div/div[1]/span[1]')
 	return str(value.text)
 
 def getTime():
@@ -66,6 +66,6 @@ def getNews():
 	return result
 
 def getStockPrices(stockName):
-	stockPrice = stockV.get_live_price(stockName)
+	stockPrice = yf.Ticker(stockName).info['ask']
 	stockPrice = round(stockPrice, 1)
 	return stockPrice
