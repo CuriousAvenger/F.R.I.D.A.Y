@@ -1,5 +1,5 @@
 # F.R.I.D.A.Y
-F.R.I.D.A.Y. is a natural-language user interface created by Tony Stark, designed to work with his Iron Man armor. She served as Stark's main user interface computer system during the final battle between the Avengers and Ultron in Sokovia and to find information about Helmut Zemo.
+F.R.I.D.A.Y. is a natural-language user interface created by Tony Stark, designed to work with his Iron Man armor. She served as Stark's main user interface computer system during the final battle between the Avengers and Ultron in Sokovia and to find information about Helmut Zemo. My Friday is a simulation of that alexa-like program. 
 
 # How To Use:
 - git clone https://github.com/CuriousAvenger/F.R.I.D.A.Y
